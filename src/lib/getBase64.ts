@@ -25,7 +25,6 @@ async function getBase64(imageUrl: string){
 export default async function addBlurredDataUrls(images: ImagesResults): Promise<Photo[]>{
     // Make all requests asynchronously
     const base64Promises = images.photos.map(photo=> getBase64(photo.src.large))
-    //11.:04 #7
 
     // Resolve all promises in order:
     const base64Results = await Promise.all(base64Promises);

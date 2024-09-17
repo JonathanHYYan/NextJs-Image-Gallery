@@ -18,7 +18,7 @@ export default async function fetchImages(
 
     const imagesResults: ImagesResults = await res.json();
 
-    console.log(imagesResults);
+    // console.log(imagesResults);
 
     // Parse data with Zod schema
     const parsedData = ImagesSchemaWithPhotos.parse(imagesResults);
@@ -31,7 +31,7 @@ export default async function fetchImages(
   } catch (e) {
     // Will show in terminal console
     if (e instanceof Error) {
-      console.log(e.stack);
+      // console.log(e.stack);
     }
   }
 }
