@@ -31,7 +31,7 @@ export default async function fetchImages(
   } catch (e) {
     // Will show in terminal console
     if (e instanceof Error) {
-      // console.log(e.stack);
+      console.log(e.stack);
     }
   }
 }
